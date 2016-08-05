@@ -8,9 +8,6 @@ RUN apk add \
     --update \
     squid
 
-# Update certificate authorities
-RUN update-ca-certificates
-
 # Enable caching by default
 RUN sed -i 's|#cache_dir ufs /var/cache/squid 100 16 256|cache_dir aufs /var/cache/squid 100 16 256|' /etc/squid/squid.conf
 
