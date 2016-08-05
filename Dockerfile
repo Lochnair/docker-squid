@@ -32,4 +32,4 @@ USER squid
 # Create swap directories
 RUN /usr/sbin/squid -Nz -f /etc/squid/squid.conf
 
-ENTRYPOINT ["/usr/bin/squid", "-N", "-Y", "-C", "-d 1", "-f /etc/squid/squid.conf"]
+ENTRYPOINT ["/usr/sbin/squid", "-N", "-Y", "-C", "-d 1", "-f /etc/squid/squid.conf"]
