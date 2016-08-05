@@ -6,8 +6,6 @@ LABEL Description="Docker image for Squid based on the offical Alpine Linux imag
 RUN apk add \
     --no-cache \
     --update \
-    bash \
-    ca-certificates \
     squid
 
 # Update certificate authorities
