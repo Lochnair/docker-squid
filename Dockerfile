@@ -18,6 +18,10 @@ VOLUME /etc/squid
 VOLUME /var/cache/squid
 VOLUME /var/log/squid
 
+# Add start script and make it executable
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
 USER squid
 
 ENTRYPOINT ["/start.sh"]
