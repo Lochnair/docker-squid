@@ -19,7 +19,7 @@ RUN sed -i 's|#cache_dir ufs /var/cache/squid 100 16 256|cache_dir aufs /var/cac
 # Disable access to Squid from localhost
 RUN sed -i 's|#http_access deny to_localhost|http_access deny to_localhost|' /etc/squid/squid.conf
 
-RUN printf "\n# Write pidfile to /tmp\npid_filename /tmp/squid.pid" >> /etc/squid/squid.conf
+RUN printf "\n# Write pidfile to /tmp\npid_filename /tmp/squid.pid\n" >> /etc/squid/squid.conf
 
 # Expose port
 EXPOSE 3128
